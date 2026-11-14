@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>SELA-TTT: Rebuttal Videos</title>
+  <style>
+    body { margin: 0; background: white; color: #222; font: 16px/1.5 Arial, sans-serif; }
+    main { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { font-size: 26px; margin: 0 0 12px; }
+    h2 { font-size: 22px; margin: 40px 0 20px; padding-top: 16px; border-top: 1px solid #ddd; }
+    h3 { font-size: 18px; margin: 28px 0 14px; }
+    nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    a { color: #175b98; }
+    .videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    figure { margin: 0; min-width: 0; }
+    video { display: block; width: 100%; aspect-ratio: 4/3; background: #f3f3f3; }
+    figcaption { margin-top: 8px; }
+    .demonstration { max-width: 520px; margin-bottom: 24px; }
+    @media (max-width: 760px) { .videos, .three { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>SELA-TTT: Rebuttal Videos</h1>
+  <nav aria-label="Reviewers">
+    <a href="#tzut">Reviewer tZUt</a>
+    <a href="#qwrg">Reviewer QwRG</a>
+    <a href="#puxm">Reviewer Puxm</a>
+  </nav>
+
+  <section id="tzut">
+    <h2>Reviewer tZUt</h2>
+    <h3>Direct semantic input</h3>
+    <div class="videos">
+      <figure><video controls playsinline preload="none" poster="posters/token-chemistry.jpg" src="videos/token-chemistry.mp4" aria-label="Semantic-token baseline on Chemistry"></video><figcaption>Semantic-token baseline. Standard Chemistry execution with direct semantic inputs.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/sela-chemistry.jpg" src="videos/sela-chemistry.mp4" aria-label="SELA-TTT on Chemistry"></video><figcaption>SELA-TTT. Standard Chemistry execution with semantic modulation.</figcaption></figure>
+    </div>
+    <h3>Human and learned feedback</h3>
+    <div class="videos">
+      <figure><video controls playsinline preload="none" poster="posters/sela-human-feedback.jpg" src="videos/sela-human-feedback.mp4" aria-label="SELA-TTT with human feedback"></video><figcaption>SELA-TTT with human feedback. Chemistry rollout driven by operator-provided semantic signals.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/sela-evaluator-feedback.jpg" src="videos/sela-evaluator-feedback.mp4" aria-label="SELA-TTT with learned evaluator feedback"></video><figcaption>SELA-TTT with learned feedback. Chemistry rollout driven by the history evaluator.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="qwrg">
+    <h2>Reviewer QwRG</h2>
+    <h3>Learned semantic feedback</h3>
+    <div class="videos">
+      <figure><video controls playsinline preload="none" poster="posters/sela-human-feedback.jpg" src="videos/sela-human-feedback.mp4" aria-label="SELA-TTT with human feedback"></video><figcaption>SELA-TTT with human feedback. Chemistry rollout driven by operator-provided semantic signals.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/sela-evaluator-feedback.jpg" src="videos/sela-evaluator-feedback.mp4" aria-label="SELA-TTT with learned evaluator feedback"></video><figcaption>SELA-TTT with learned feedback. Chemistry rollout driven by the history evaluator.</figcaption></figure>
+    </div>
+    <h3>Direct semantic input</h3>
+    <div class="videos">
+      <figure><video controls playsinline preload="none" poster="posters/token-chemistry.jpg" src="videos/token-chemistry.mp4" aria-label="Semantic-token baseline on Chemistry"></video><figcaption>Semantic-token baseline. Standard Chemistry execution with direct semantic inputs.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/sela-chemistry.jpg" src="videos/sela-chemistry.mp4" aria-label="SELA-TTT on Chemistry"></video><figcaption>SELA-TTT. Standard Chemistry execution with semantic modulation.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="puxm">
+    <h2>Reviewer Puxm</h2>
+    <h3>Semantic-aware in-context learning</h3>
+    <figure class="demonstration"><video controls playsinline preload="none" poster="posters/human-demonstration.jpg" src="videos/human-demonstration.mp4" aria-label="Imperfect human demonstration"></video><figcaption>Imperfect human demonstration. Chemistry video prompt for semantic-aware in-context learning.</figcaption></figure>
+    <div class="videos three">
+      <figure><video controls playsinline preload="none" poster="posters/input-icl.jpg" src="videos/input-icl.mp4" aria-label="Input-feature modulation on Chemistry ICL"></video><figcaption>Input-feature modulation. Chemistry execution using the annotated demonstration.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/raw-qkv-icl.jpg" src="videos/raw-qkv-icl.mp4" aria-label="Raw-QKV modulation on Chemistry ICL"></video><figcaption>Raw-QKV modulation. Chemistry execution using the annotated demonstration.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/sela-icl.jpg" src="videos/sela-icl.mp4" aria-label="SELA-TTT on Chemistry ICL"></video><figcaption>SELA-TTT. Chemistry execution using the annotated demonstration.</figcaption></figure>
+    </div>
+    <h3>Unseen switching</h3>
+    <div class="videos three">
+      <figure><video controls playsinline preload="none" poster="posters/input-switching.jpg" src="videos/input-switching.mp4" aria-label="Input-feature modulation on unseen switching"></video><figcaption>Input-feature modulation. Repeated Picking with target-exclusion feedback.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/raw-qkv-switching.jpg" src="videos/raw-qkv-switching.mp4" aria-label="Raw-QKV modulation on unseen switching"></video><figcaption>Raw-QKV modulation. Repeated Picking with target-exclusion feedback.</figcaption></figure>
+      <figure><video controls playsinline preload="none" poster="posters/sela-switching.jpg" src="videos/sela-switching.mp4" aria-label="SELA-TTT on unseen switching"></video><figcaption>SELA-TTT. Repeated Picking with target-exclusion feedback.</figcaption></figure>
+    </div>
+  </section>
+</main>
+</body>
+</html>
